@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestro Primer Beso</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom right, #ffe6eb, #fff5f7);
+      color: #4a2c2a;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .card {
+      background-color: #ffffffdd;
+      padding: 40px 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      max-width: 90vw;
+      width: 100%;
+      max-width: 800px;
+      margin: 20px;
+      animation: slideUp 1s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      color: #c1126b;
+      margin-bottom: 30px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+
+    .animated-text {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #c1126b;
+      animation: typing 6s steps(60, end), blink 0.7s step-end infinite;
+      font-size: 1.1em;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: #c1126b; }
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.8em;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeInText 1s forwards;
+    }
+
+    p:nth-of-type(1) { animation-delay: 1s; }
+    p:nth-of-type(2) { animation-delay: 2s; }
+    p:nth-of-type(3) { animation-delay: 3s; }
+    p:nth-of-type(4) { animation-delay: 4s; }
+    p:nth-of-type(5) { animation-delay: 5s; }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .firma {
+      text-align: right;
+      font-style: italic;
+      margin-top: 40px;
+    }
+
+    .heart {
+      position: fixed;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 6s infinite ease-in, colorChange 4s infinite;
+      opacity: 0.7;
+      z-index: 0;
+      border-radius: 20%;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -50%;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -50%;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes colorChange {
+      0% { background: #ff4d6d; }
+      50% { background: #ff99ac; }
+      100% { background: #ff4d6d; }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .card {
+        padding: 30px 15px;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      const size = 10 + Math.random() * 20;
+      heart.style.width = heart.style.height = size + 'px';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 3 + Math.random() * 3 + 's';
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <div class="card">
+    <h1 class="animated-text">✨ Nuestro Primer Beso ✨</h1>
+    <p>
+      Ese día fue especial desde el primer instante. En todo el día andábamos un poquito más pegados de lo normal,
+      como si nuestros cuerpos supieran que algo estaba por pasar. Yo te daba besos en la mejilla, en la frente,
+      con esa ternura que me inspiras sin darte cuenta.
+    </p>
+    <p>
+      Pero en la noche... todo fue maravilloso. Había una energía distinta en el aire. Un silencio dulce, una calma que hablaba más que mil palabras.
+      Poco a poco me fui acercando a ti, a tus labios, con el corazón temblando entre nervios y emoción...
+    </p>
+    <p>
+      Hasta que me animé. Y te besé.
+    </p>
+    <p>
+      Esa noche fue simplemente mágica. No hizo falta nada más. Ese beso fue un antes y un después. Fue el primer capítulo de nuestra historia de amor.
+      Fue un 13 de febrero que jamás voy a olvidar. Porque desde entonces, mis labios tienen memoria. Y tu nombre vive en cada beso que te doy.
+    </p>
+    <p class="firma">
+      Con todo mi amor,<br />
+      Tu eterno enamorado 💖
+    </p>
+  </div>
+</body>
+</html>

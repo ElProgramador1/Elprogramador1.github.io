@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Aniversario</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffdee9, #b5fffc);
+      background-size: 400% 400%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      min-height: 100vh;
+      color: #333;
+      animation: gradientShift 15s ease infinite;
+      overflow: hidden;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0px 0px 30px rgba(0,0,0,0.25);
+      padding: 30px;
+      max-width: 700px;
+      line-height: 1.7;
+      animation: fadeIn 2s ease forwards;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff4e73;
+      animation: fadeIn 2.5s ease forwards;
+    }
+
+    p {
+      margin-bottom: 1em;
+      animation: fadeIn 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    p:nth-of-type(1) { animation-delay: 0.5s; }
+    p:nth-of-type(2) { animation-delay: 1s; }
+    p:nth-of-type(3) { animation-delay: 1.5s; }
+    p:nth-of-type(4) { animation-delay: 2s; }
+
+    .footer {
+      text-align: center;
+      font-style: italic;
+      margin-top: 30px;
+      color: #888;
+      animation: fadeIn 3s ease forwards;
+      animation-delay: 2.5s;
+      opacity: 0;
+    }
+
+    .heart {
+      position: fixed;
+      font-size: 24px;
+      animation: float 6s ease-in-out infinite;
+      color: #ff4e73;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .heart:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+    .heart:nth-child(2) { top: 30%; left: 80%; animation-delay: 2s; }
+    .heart:nth-child(3) { top: 60%; left: 50%; animation-delay: 4s; }
+    .heart:nth-child(4) { top: 80%; left: 10%; animation-delay: 1s; }
+    .heart:nth-child(5) { top: 15%; left: 70%; animation-delay: 3s; }
+  </style>
+</head>
+<body>
+  <!-- Corazones flotantes -->
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+
+  <!-- Música opcional -->
+  <!-- Reemplaza 'perfecta.mp3' por la ruta real del archivo si lo vas a usar -->
+  <!--
+  <audio autoplay loop>
+    <source src="perfecta.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+  -->
+
+  <div class="card">
+    <h1>Feliz Aniversario, mi amor ❤️</h1>
+    <p>Hoy no es un día cualquiera… Hoy celebramos el tiempo que llevamos caminando juntos, aprendiendo el uno del otro, creciendo, riendo y también superando cosas que nos han hecho más fuertes.</p>
+    <p>Gracias por ser tú, por dejarme entrar en tu vida, por enseñarme lo que es amar con paciencia, ternura y verdad. Me siento afortunado de compartir cada momento contigo, desde los más simples hasta los que marcan para siempre.</p>
+    <p>He visto cómo creces, cómo brillas… y cada día me convenzo más de que no hay nadie como tú. Gracias por elegirme, por aguantarme, por quererme tal como soy, incluso cuando no ha sido fácil.</p>
+    <p>Te amo. Te amo en los días buenos y en los complicados, en tus sonrisas y en tus silencios. Y si me preguntas qué quiero… la respuesta siempre será la misma: Más días contigo. Más años. Más todo. A tu lado.</p>
+    <div class="footer">Gracias por todo jsjsjs ✨</div>
+  </div>
+</body>
+</html>
